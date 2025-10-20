@@ -25,4 +25,3 @@ Proyek ini dikembangkan menggunakan kombinasi beberapa tools berikut:
 
 ---
 
-## Struktur Folder
