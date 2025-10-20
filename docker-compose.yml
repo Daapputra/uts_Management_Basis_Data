@@ -1,0 +1,31 @@
+services:
+  postgres_service:
+    container_name: postgres_Muhammad_Nur_Daffa_Naufal_Putra
+    image: postgres:15     # versi stabil dan tersedia
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_PORT}:5432"   # Contoh: 22060:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+  pgadmin_service:
+    container_name: pgadmin_Muhammad_Nur_Daffa_Naufal_Putra
+    image: dpage/pgadmin4
+    env_file:
+      - .env
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - "${PGADMIN_PORT}:80"      # Contoh: 44660:80
+    depends_on:
+      - postgres_service
+    restart: always
+
+volumes:
+  postgres_data:
