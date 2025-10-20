@@ -19,7 +19,6 @@ Proyek ini dikembangkan menggunakan kombinasi beberapa tools berikut:
 | Komponen | Teknologi yang digunakan |
 |-----------|---------------------------|
 | Database | MySQL / PostgreSQL |
-| Diagram | Draw.io / Lucidchart |
 | Editor | Visual Studio Code |
 | Lainnya | Git & GitHub untuk version control |
 
